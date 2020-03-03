@@ -21,7 +21,47 @@ Specification:
 
 ### User Stories
 ```
-As a Homeowner
-So I can control the temperature of my house
-I want a Thermostat
+As a Homeowner,
+So I can control the temperature of my house,
+I want a Thermostat.
+
+As a Homeowner,
+So that my house is warm,
+I want the default temperature of my Thermostat to be 20°C.
+
+As a Homeowner,
+So that my house doesn't get too hot,
+I want to be able to turn the temperature of my Thermostat down.
+
+As a Homeowner,
+So that my house doesn't get too cold,
+I want to be able to turn the temperature of my Thermostat up.
+
+As a conscious Homeowner,
+In order to save money and/or protect the environment,
+I want my Thermostat to have a power saving mode.
+
+As a conscious Homeowner,
+In order to save money and/or protect the environment,
+I want my Thermostat to be in power saving mode as default.
+
+As a conscious Homeowner,
+In order to save money and/or protect the environment,
+I want the maximum temperature of my Thermostat to be 25°C in power saving mode.
+
+As a Homeowner,
+So that I have full control of my Thermostat,
+I want to turn Power Saving mode off.
+
+As a Homeowner,
+So that my house doesn't get too hot,
+I want the maximum temperature when power saving mode is off to be 32°C.
+
+As a Homeowner,
+So that I can easily reset the temperature of my Thermostat to default,
+I want a reset button.
+
+As a Homeowner,
+So I can easily see how much energy I am using,
+I want the Thermostat to display the usage as either high, medium, or low (by colour).
 ```
