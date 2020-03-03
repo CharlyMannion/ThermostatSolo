@@ -23,4 +23,12 @@ describe("Thermostat", function() {
       expect(thermostat.temperature).toEqual(increasedTemp);
     });
   });
+
+  describe("decrease temperature", function() {
+    it("decreases the temperature by 1", function() {
+      thermostat.decreaseTemp();
+      decreasedTemp = thermostat.DEFAULT_TEMPERATURE - INCREMENT_VALUE;
+      expect(thermostat.temperature).toEqual(decreasedTemp);
+    });
+  });
 });
