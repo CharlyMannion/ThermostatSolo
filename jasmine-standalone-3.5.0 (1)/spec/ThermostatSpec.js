@@ -25,7 +25,7 @@ describe("Thermostat", function() {
 
     it("has a minimum temp", function() {
       expect(thermostat.MINIMUM_TEMP).toEqual(10);
-    })
+    });
   });
 
   describe("increase temperature", function() {
@@ -91,6 +91,31 @@ describe("Thermostat", function() {
       thermostat.temperature = thermostat.MAX_TEMP_PSM_OFF;
       thermostat.resetToDefault();
       expect(thermostat.temperature).toEqual(thermostat.DEFAULT_TEMPERATURE);
+    });
+  });
+
+  describe("energy usage", function() {
+    it("is high if the temp is above 25", function() {
+      thermostat.isPowerSaving = false;
+      thermostat.temperature = 30;
+      expect(thermostat.energyUsage()).toEqual("high-usage");
+    });
+    it("has the limit of high usage set as a constant", function() {
+      expect(thermostat.HIGH_USAGE_LIMIT).toEqual(25);
+    });
+    it("has the limit of high usage set as a constant", function() {
+      expect(thermostat.HIGH_USAGE_LIMIT).toEqual(25);
+    });
+    it("has the limit of low usage set as a constant", function() {
+      expect(thermostat.LOW_USAGE_LIMIT).toEqual(18);
+    });
+    it("is low if the temp is below 18", function() {
+      thermostat.temperature = 17;
+      expect(thermostat.energyUsage()).toEqual("low-usage");
+    });
+    it("is medium if the temp is below 25 but above 18", function() {
+      thermostat.temperature = 20;
+      expect(thermostat.energyUsage()).toEqual("medium-usage");
     });
   });
 });
