@@ -4,6 +4,7 @@ function Thermostat() {
   this.MAX_TEMP_PSM_ON = 25;
   this.MAX_TEMP_PSM_OFF = 32;
   this.isPowerSaving = true;
+  this.MINIMUM_TEMP = 10;
 };
 
 Thermostat.prototype.increaseTemp = function() {
@@ -15,6 +16,9 @@ Thermostat.prototype.increaseTemp = function() {
 };
 
 Thermostat.prototype.decreaseTemp = function() {
+  if(this.temperature <= this.MINIMUM_TEMP) {
+    throw new Error("Minimum temperature reached");
+  }
   this.temperature --
 };
 

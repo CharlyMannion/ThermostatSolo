@@ -22,6 +22,10 @@ describe("Thermostat", function() {
     it("should have a higher max temp when power saving mode is off", function() {
       expect(thermostat.MAX_TEMP_PSM_OFF).toEqual(32);
     });
+
+    it("has a minimum temp", function() {
+      expect(thermostat.MINIMUM_TEMP).toEqual(10);
+    })
   });
 
   describe("increase temperature", function() {
@@ -56,6 +60,12 @@ describe("Thermostat", function() {
       thermostat.decreaseTemp();
       decreasedTemp = thermostat.DEFAULT_TEMPERATURE - INCREMENT_VALUE;
       expect(thermostat.temperature).toEqual(decreasedTemp);
+    });
+    it("cannot be turned down beyond the minimum temp", function() {
+      thermostat.temperature = thermostat.MINIMUM_TEMP;
+      expect(function() {
+        thermostat.decreaseTemp();
+      }).toThrowError("Minimum temperature reached");
     });
   });
 
