@@ -85,4 +85,12 @@ describe("Thermostat", function() {
       expect(thermostat.isPowerSaving).toBeFalsy();
     });
   });
+
+  describe("reset temperature", function() {
+    it("resets the temperature to the default temp", function() {
+      thermostat.temperature = thermostat.MAX_TEMP_PSM_OFF;
+      thermostat.resetToDefault();
+      expect(thermostat.temperature).toEqual(thermostat.DEFAULT_TEMPERATURE);
+    });
+  });
 });

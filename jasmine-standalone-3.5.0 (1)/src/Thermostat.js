@@ -28,4 +28,8 @@ Thermostat.prototype.togglePowerSaving = function() {
 
 Thermostat.prototype._maximumTemperature = function() {
   return(this.isPowerSaving ? this.MAX_TEMP_PSM_ON : this.MAX_TEMP_PSM_OFF);
+};
+
+Thermostat.prototype.resetToDefault = function() {
+  this.temperature = this.DEFAULT_TEMPERATURE;
 }
