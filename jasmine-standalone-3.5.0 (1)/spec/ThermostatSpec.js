@@ -6,7 +6,7 @@ describe("Thermostat", function() {
     thermostat = new Thermostat();
   });
 
-  describe("start temperature", function() {
+  describe("start temperatures", function() {
     it("should have a default temperature of 20°C", function() {
       expect(thermostat.DEFAULT_TEMPERATURE).toEqual(20);
     });
@@ -14,6 +14,14 @@ describe("Thermostat", function() {
     it("should start at the default temperature", function() {
       expect(thermostat.temperature).toEqual(thermostat.DEFAULT_TEMPERATURE);
     });
+
+    it("should have a max temp when power saving mode is on", function() {
+      expect(thermostat.MAX_TEMP_PSM_ON).toEqual(25);
+    });
+
+    it("should have a higher max temp when power saving mode is off", function() {
+      expect(thermostat.MAX_TEMP_PSM_OFF).toEqual(32);
+    })
   });
 
   describe("increase temperature", function() {
