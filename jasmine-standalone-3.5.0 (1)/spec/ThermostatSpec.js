@@ -21,7 +21,7 @@ describe("Thermostat", function() {
 
     it("should have a higher max temp when power saving mode is off", function() {
       expect(thermostat.MAX_TEMP_PSM_OFF).toEqual(32);
-    })
+    });
   });
 
   describe("increase temperature", function() {
@@ -30,6 +30,25 @@ describe("Thermostat", function() {
       increasedTemp = thermostat.DEFAULT_TEMPERATURE + INCREMENT_VALUE;
       expect(thermostat.temperature).toEqual(increasedTemp);
     });
+    it("cannot excede the max temp when PSM mode is on", function() {
+      thermostat.temperature = thermostat.MAX_TEMP_PSM_ON;
+      expect(function() {
+        thermostat.increaseTemp()
+      }).toThrowError("Maximum temperature reached");
+    });
+    it("can excede the max temp for power saving mode when power saving mode is turned off", function() {
+      thermostat.temperature = thermostat.MAX_TEMP_PSM_ON;
+      thermostat.isPowerSaving = false;
+      expect(function() {
+        thermostat.increaseTemp()
+      }).not.toThrowError("Maximum temperature reached");
+    });
+    it("cannot excede the max temp when PSM mode is on", function() {
+      thermostat.temperature = thermostat.MAX_TEMP_PSM_OFF;
+      expect(function() {
+        thermostat.increaseTemp()
+      }).toThrowError("Maximum temperature reached");
+    });
   });
 
   describe("decrease temperature", function() {
@@ -37,6 +56,23 @@ describe("Thermostat", function() {
       thermostat.decreaseTemp();
       decreasedTemp = thermostat.DEFAULT_TEMPERATURE - INCREMENT_VALUE;
       expect(thermostat.temperature).toEqual(decreasedTemp);
+    });
+  });
+
+  describe("power saving mode", function() {
+    it("power saving mode is on as default", function() {
+      expect(thermostat.isPowerSaving).toBeTruthy();
+    });
+    it("sets the max temp to 25 when on"), function() {
+      expect(thermostat._maximumTemperature()).toEqual(thermostat.MAX_TEMP_PSM_ON);
+    };
+    it("sets the max temp to 32 when off", function() {
+      thermostat.togglePowerSaving();
+      expect(thermostat._maximumTemperature()).toEqual(thermostat.MAX_TEMP_PSM_OFF);
+    })
+    it("can be switched off", function() {
+      thermostat.togglePowerSaving();
+      expect(thermostat.isPowerSaving).toBeFalsy();
     });
   });
 });
