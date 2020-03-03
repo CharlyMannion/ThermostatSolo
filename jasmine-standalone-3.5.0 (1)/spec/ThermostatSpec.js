@@ -1,15 +1,26 @@
 describe("Thermostat", function() {
   var thermostat;
+  INCREMENT_VALUE = 1
 
   beforeEach(function() {
     thermostat = new Thermostat();
   });
 
-  it("should have a default temperature of 20°C", function() {
-    expect(thermostat.DEFAULT_TEMPERATURE).toEqual(20);
+  describe("start temperature", function() {
+    it("should have a default temperature of 20°C", function() {
+      expect(thermostat.DEFAULT_TEMPERATURE).toEqual(20);
+    });
+
+    it("should start at the default temperature", function() {
+      expect(thermostat.temperature).toEqual(thermostat.DEFAULT_TEMPERATURE);
+    });
   });
 
-  it("should start at the default temperature", function() {
-    expect(thermostat.temperature).toEqual(thermostat.DEFAULT_TEMPERATURE);
+  describe("increase temperature", function() {
+    it("increases the temperature by 1", function() {
+      thermostat.increaseTemp();
+      increasedTemp = thermostat.DEFAULT_TEMPERATURE + INCREMENT_VALUE;
+      expect(thermostat.temperature).toEqual(increasedTemp);
+    });
   });
 });
