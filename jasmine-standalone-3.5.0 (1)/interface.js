@@ -41,5 +41,6 @@ $(document).ready(function() {
 
   function updateEnergyUsage() {
     $('#energy-usage-status').text(thermostat.energyUsage());
+    $('#energy-usage-status').attr('class', thermostat.energyUsage());
   }
 });
