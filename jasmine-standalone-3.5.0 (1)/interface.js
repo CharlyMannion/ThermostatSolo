@@ -3,7 +3,7 @@ $(document).ready(function() {
 
   updateTemperature();
 
-  $('#power-saving-status').text(thermostat.powerSavingStatus());
+  updatePowerSaving();
 
   $('#energy-usage-status').text(thermostat.energyUsage());
 
@@ -25,10 +25,15 @@ $(document).ready(function() {
 
   $('#toggle_power_saving').on('click', function() {
     thermostat.togglePowerSaving();
-    $('#power-saving-status').text(thermostat.powerSavingStatus());
+    updatePowerSaving();
+    // $('#power-saving-status').text(thermostat.powerSavingStatus());
   });
 
   function updateTemperature() {
     $('#temperature').text(thermostat.temperature + "°C");
+  };
+
+  function updatePowerSaving() {
+    $('#power-saving-status').text(thermostat.powerSavingStatus());
   };
 });
