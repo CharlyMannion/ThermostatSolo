@@ -10,21 +10,21 @@ $(document).ready(function() {
 
   $('#temperature-up').on('click', function() {
     thermostat.increaseTemp();
-    $('#temperature').text(thermostat.temperature);
+    $('#temperature').text(thermostat.temperature + "°C");
   });
 
   $('#temperature-down').on('click', function() {
     thermostat.decreaseTemp();
-    $('#temperature').text(thermostat.temperature);
+    $('#temperature').text(thermostat.temperature + "°C");
   });
 
   $('#temperature-reset').on('click', function() {
     thermostat.resetToDefault();
-    $('#temperature').text(thermostat.temperature);
+    $('#temperature').text(thermostat.temperature + "°C");
   });
 
   $('#toggle_power_saving').on('click', function() {
     thermostat.togglePowerSaving();
-    $('#power-saving-status').text(thermostat.powerSavingStatus()); 
+    $('#power-saving-status').text(thermostat.powerSavingStatus());
   });
 });
