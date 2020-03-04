@@ -84,6 +84,13 @@ describe("Thermostat", function() {
       thermostat.togglePowerSaving();
       expect(thermostat.isPowerSaving).toBeFalsy();
     });
+    it("the status is ON if the power saving mode is true", function() {
+      expect(thermostat.powerSavingStatus()).toEqual("ON");
+    });
+    it("the status is OFF if the power saving mode is false", function() {
+      thermostat.togglePowerSaving();
+      expect(thermostat.powerSavingStatus()).toEqual("OFF");
+    });
   });
 
   describe("reset temperature", function() {
