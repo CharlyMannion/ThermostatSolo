@@ -8,23 +8,23 @@ $(document).ready(function() {
   $('#energy-usage-status').text(thermostat.energyUsage());
 
 
-  $('#temperature-up').on('click', function() { // event listener
-    thermostat.increaseTemp(); // update model
-    $('#temperature').text(thermostat.temperature); // update view
+  $('#temperature-up').on('click', function() {
+    thermostat.increaseTemp();
+    $('#temperature').text(thermostat.temperature);
   });
 
-  $('#temperature-down').on('click', function() { // event listener
-    thermostat.decreaseTemp(); // update model
-    $('#temperature').text(thermostat.temperature); // update view
+  $('#temperature-down').on('click', function() {
+    thermostat.decreaseTemp();
+    $('#temperature').text(thermostat.temperature);
   });
 
-  $('#temperature-reset').on('click', function() { // event listener
-    thermostat.resetToDefault(); // update model
-    $('#temperature').text(thermostat.temperature); // update view
+  $('#temperature-reset').on('click', function() {
+    thermostat.resetToDefault();
+    $('#temperature').text(thermostat.temperature);
   });
 
-  $('#toggle_power_saving').on('click', function() { // event listener
-    thermostat.togglePowerSaving(); // update model
-    $('#power-saving-status').text(thermostat.powerSavingStatus()); // update view
+  $('#toggle_power_saving').on('click', function() {
+    thermostat.togglePowerSaving();
+    $('#power-saving-status').text(thermostat.powerSavingStatus()); 
   });
 });
