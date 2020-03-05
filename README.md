@@ -10,8 +10,8 @@ A programme, written in Javascript, that models a simple thermostat.
 `git clone https://github.com/CharlyMannion/ThermostatSolo`
 * run the app locally
 `ruby 'jasmine-standalone-3.5.0 (1)/server.rb'`
-* visit http://localhost:4567/time
-* visit http://localhost:4567/index.html
+* visit http://localhost:4567/index.html to view the Thermostat
+* visit http://localhost:4567/time to view the API
 
 ### Challenge setup
 
