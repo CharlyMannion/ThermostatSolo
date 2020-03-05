@@ -11,6 +11,7 @@ A programme, written in Javascript, that models a simple thermostat.
 * run the app locally
 `ruby 'jasmine-standalone-3.5.0 (1)/server.rb'`
 * visit http://localhost:4567/time
+* visit http://localhost:4567/index.html
 
 ### Challenge setup
 
