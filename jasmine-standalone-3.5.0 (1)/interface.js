@@ -44,7 +44,7 @@ $(document).ready(function() {
     $('#energy-usage-status').attr('class', thermostat.energyUsage());
   };
 
-  function displayCity(city) {
+  function displayChosen(city) {
     var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city;
     var token = '&appid=a3d9eb01d4de82b9b8d0849ef604dbed';
     var units = '&units=metric';
@@ -56,6 +56,6 @@ $(document).ready(function() {
   $('#select-city').submit(function(event) {
     event.preventDefault();
     var city = $('#current-city').val();
-    displayCity(city);
+    displayChosen(city);
   });
 });
