@@ -4,6 +4,14 @@
 
 A programme, written in Javascript, that models a simple thermostat.
 
+### Using the app
+* Fork this repo
+* Clone to your local machine
+`git clone https://github.com/CharlyMannion/ThermostatSolo`
+* run the app locally
+`ruby 'jasmine-standalone-3.5.0 (1)/server.rb'`
+* visit http://localhost:4567/time
+
 ### Challenge setup
 
 Specification:
