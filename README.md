@@ -6,7 +6,12 @@ https://charlymannion.github.io/ThermostatSolo/
 
 ## Preview
 
-![Screenshot 2020-10-02 at 13 28 23](https://user-images.githubusercontent.com/28218869/94923487-da1e2d80-04b3-11eb-8cff-bd70f19bb71e.png)
+### Desktop
+![Screenshot 2020-10-02 at 15 51 02](https://user-images.githubusercontent.com/28218869/94937297-4d7d6a80-04c7-11eb-87ec-2ac7e8121d73.png)
+
+
+### Mobile
+![Screenshot 2020-10-02 at 15 50 48](https://user-images.githubusercontent.com/28218869/94937308-52421e80-04c7-11eb-9d71-407b1eb7c849.png)
 
 
 ### Using the app
