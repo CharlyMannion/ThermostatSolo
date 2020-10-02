@@ -2,42 +2,51 @@
 <html>
 <html lang="en">
 <link rel="stylesheet" type="text/css" href="theme.css">
-  <head>
+
+<head>
     <title>Thermostat</title>
     <meta charset="utf-8">
     <script src="src/Thermostat.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="interface.js"></script>
-  </head>
-  <div>
-  <body>
-    <section>
-      <class="display">
-      <h1 id="temperature">Current Thermostat Temperature</h1>
-      Power Saving Mode: <span id="power-saving-status">ON</span>
-      <p>
-      Energy Usage: <span id="energy-usage-status">energy usage</span>
+</head>
+<div>
 
-    <class="controls">
-      <p>
-        <button id="toggle_power_saving">Power Saving Mode</button>
-        <button id="temperature-up">Thermostat Temperature Up</button>
-        <button id="temperature-down">Thermostat Temperature down</button>
-        <button id="temperature-reset">Reset Thermostat Temperature</button>
-      </p>
-    </section>
+    <body>
+        <section>
+            <class="display">
+                <h1 id="temperature">Current Thermostat Temperature</h1>
+                </p>
+                <p>
+                    ENERGY USAGE: <span id="energy-usage-status">energy usage</span>
 
-    <section>
-      <h1>Current temperature: <span id="current-temperature">20°C</span></h1>
-      <form id="select-city">
-        <input id="current-city" type="text" placeholder="Enter a city"></input>
-        <input type="submit"></input>
-      </form>
-    </section>
+                    <class="controls">
+                        <p>
+                            <button id="temperature-up"> + </button>
+                            <button id="temperature-down"> - </button>
+                            <button id="temperature-reset">RESET</button>
+                            </class>
+                        </p>
+                        <p> POWER SAVING: <span id="power-saving-status">ON</span>
+                            <class="controls">
+                                <p>
+                                    <button id="toggle_power_saving">POWER SAVING ON/OFF</button>
+                                </p>
+        </section>
 
-    <section>
-      <h1>Current Time: <span id="current-time">time</span></h1>
-    </section>
+        <section>
+            <form id="select-city">
+                <input id="current-city" type="text" placeholder="Enter a city"></input>
+                <input type="submit"></input>
+            </form>
+        </section>
 
-  </body>
+        <section>
+            <h2>TEMPERATURE: <span id="current-temperature">20°C</span></h2>
+
+            <h2>TIME: <span id="current-time">10:45</span></h2>
+        </section>
+
+    </body>
+
 </html>
