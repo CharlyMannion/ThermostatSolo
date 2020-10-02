@@ -1,5 +1,7 @@
 # Thermostat
 
+![Screenshot 2020-10-02 at 13 28 23](https://user-images.githubusercontent.com/28218869/94923487-da1e2d80-04b3-11eb-8cff-bd70f19bb71e.png)
+
 ## Business logic
 
 A programme, written in Javascript, that models a simple thermostat.
