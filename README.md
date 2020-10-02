@@ -2,6 +2,8 @@
 
 A programme, written in Javascript, that models a simple thermostat.
 
+https://charlymannion.github.io/ThermostatSolo/
+
 ## Preview
 
 ![Screenshot 2020-10-02 at 13 28 23](https://user-images.githubusercontent.com/28218869/94923487-da1e2d80-04b3-11eb-8cff-bd70f19bb71e.png)
@@ -15,6 +17,8 @@ A programme, written in Javascript, that models a simple thermostat.
 `ruby 'jasmine-standalone-3.5.0 (1)/server.rb'`
 * visit http://localhost:4567/index.html to view the Thermostat
 * visit http://localhost:4567/time.json to view the API
+* Open SpecRunner.html in your web broweser to see the tests:
+
 
 ### Challenge setup
 
