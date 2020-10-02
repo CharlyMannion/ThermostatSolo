@@ -20,6 +20,9 @@ https://charlymannion.github.io/ThermostatSolo/
 * Open SpecRunner.html in your web broweser to see the tests:
 ![Screenshot 2020-10-02 at 15 30 15](https://user-images.githubusercontent.com/28218869/94935081-75b79a00-04c4-11eb-8ade-b854f99d919f.png)
 
+
+
+
 ### Challenge setup
 
 Specification:
