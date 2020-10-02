@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="theme.css">
+  <head>
+    <title>Thermostat</title>
+    <meta charset="utf-8">
+    <script src="src/Thermostat.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="interface.js"></script>
+  </head>
+  <div>
+  <body>
+    <section>
+      <class="display">
+      <h1 id="temperature">Current Thermostat Temperature</h1>
+      Power Saving Mode: <span id="power-saving-status">ON</span>
+      <p>
+      Energy Usage: <span id="energy-usage-status">energy usage</span>
+
+    <class="controls">
+      <p>
+        <button id="toggle_power_saving">Power Saving Mode</button>
+        <button id="temperature-up">Thermostat Temperature Up</button>
+        <button id="temperature-down">Thermostat Temperature down</button>
+        <button id="temperature-reset">Reset Thermostat Temperature</button>
+      </p>
+    </section>
+
+    <section>
+      <h1>Current temperature: <span id="current-temperature">20°C</span></h1>
+      <form id="select-city">
+        <input id="current-city" type="text" placeholder="Enter a city"></input>
+        <input type="submit"></input>
+      </form>
+    </section>
+
+    <section>
+      <h1>Current Time: <span id="current-time">time</span></h1>
+    </section>
+
+  </body>
+</html>
